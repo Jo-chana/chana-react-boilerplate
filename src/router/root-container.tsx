@@ -11,7 +11,11 @@ export default function RootContainer() {
         <Header />
         {
             Routes.map(it => 
-                <Route key={ it.name } exact={ it?.exact ?? false } path={ it.path } component={ it.component } />
+                <Route 
+                    key={ it.name } 
+                    exact={ it.exact ?? false } 
+                    path={ it.path } 
+                    component={ it.component } />
             )
         }
         <Footer />

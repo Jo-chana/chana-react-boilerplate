@@ -45,7 +45,7 @@ export default function RootContainer() {
             Routes.map(it => 
                 <Route 
                     key={ it.name } 
-                    exact={ it?.exact ?? false } 
+                    exact={ it.exact ?? false } 
                     path={ it.path } 
                     component={ it.component } />
             )
