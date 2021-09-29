@@ -36,7 +36,7 @@ export const Routes: IRouteItem[] = [
     }
 ]
 ```
-```typescript
+```jsx
 // client/src/router/root-container.tsx
 export default function RootContainer() {
 
@@ -138,7 +138,7 @@ export const { sidebarClick, sidebarOpen, sidebarClose } = sidebarSlice.actions;
 export const selectSidebar = (state: RootState) => state.sidebar;
 export default sidebarSlice.reducer;
 ```
-```javascript
+```jsx
 // client/src/App.tsx
 import { Provider } from 'react-redux';
 import { store } from './store';
