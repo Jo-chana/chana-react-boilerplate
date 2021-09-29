@@ -17,7 +17,7 @@
 ### 1. **Router**
 > You can add pages simply by adding route item like below.
 ```typescript
-// client/src/router/routes.ts
+// src/router/routes.ts
 import { Home } from '../pages/home';
 
 interface IRouteItem {
@@ -37,7 +37,7 @@ export const Routes: IRouteItem[] = [
 ]
 ```
 ```jsx
-// client/src/router/root-container.tsx
+// src/router/root-container.tsx
 export default function RootContainer() {
 
     return <BrowserRouter>
@@ -85,13 +85,13 @@ i18n
 export default i18n;
 ```
 ```javascript
-// client/src/App.tsx
+// src/App.tsx
 export default withTranslation()(App);
 ```
 ### 3. **State management (redux)**
 > The store for the sidebar state is basically registered. you can delete it if you don't use sidebar component
 ```javascript
-// client/src/store/index.ts
+// src/store/index.ts
 import { configureStore } from '@reduxjs/toolkit';
 
 import sidebarReducer from './sidebar';
@@ -114,7 +114,7 @@ export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 ```
 ```javascript
-// client/src/store/sidebar.ts
+// src/store/sidebar.ts
 import { createSlice } from '@reduxjs/toolkit';
 
 import { RootState } from './';
@@ -135,7 +135,7 @@ export const selectSidebar = (state: RootState) => state.sidebar;
 export default sidebarSlice.reducer;
 ```
 ```jsx
-// client/src/App.tsx
+// src/App.tsx
 import { Provider } from 'react-redux';
 import { store } from './store';
 
