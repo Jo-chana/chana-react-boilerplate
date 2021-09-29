@@ -41,7 +41,6 @@ export const Routes: IRouteItem[] = [
 export default function RootContainer() {
 
     return <BrowserRouter>
-        <Header />
         {
             Routes.map(it => 
                 <Route 
@@ -51,9 +50,6 @@ export default function RootContainer() {
                     component={ it.component } />
             )
         }
-        <Footer />
-        {/* if you need sidebar on your website */}
-        {/* <SidebarContainer /> */}
     </BrowserRouter>
 }
 ```
